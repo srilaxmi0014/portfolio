@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yerradla Sri Laxmi | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container nav-container">
+      <h1 class="logo">Yerradla Sri Laxmi</h1>
+      <ul class="nav-links">
+        <li><button data-target="home">Home</button></li>
+        <li><button data-target="about">About</button></li>
+        <li><button data-target="education">Education</button></li>
+        <li><button data-target="skills">Skills</button></li>
+        <li><button data-target="projects">Projects</button></li>
+        <li><button data-target="contact">Contact</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="page active">  
+    <div class="container home-content">
+      <div class="home-text">
+        <h1>Welcome to My Portfolio 👋</h1>
+        <p class="welcome-note">
+          Hi there! I'm <strong>Yerradla Sri Laxmi</strong> — a passionate Computer Science student 
+          who loves building creative and efficient digital solutions.  
+          Explore my projects, skills, and certifications to know more about my journey!
+        </p>
+      </div>
+      <div class="home-img">
+        <img src="siri.profile.jpg" alt="Sri Laxmi Profile Picture">
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Yerradla Sri Laxmi. All rights reserved.</p>
+    </footer>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="page">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I am <strong>Yerradla Sri Laxmi</strong>, a passionate CSE student at KL University with a strong foundation in web development and programming. I have experience in HTML, CSS, JavaScript, MySQL, and C, and I enjoy building meaningful web applications and solving real-world problems.</p>
+      <p>My specialization is in <strong>AI for Computational Intelligence</strong>, where I focus on designing intelligent systems that can analyze data, learn patterns, and make decisions efficiently.</p>
+      <p>I am interested in AI, cloud computing, and full-stack web development. I constantly seek to learn new technologies and improve my skills through projects, certifications, and hands-on experience.</p>
+      <p>My goal is to become a proficient software developer and AI specialist, creating innovative solutions and contributing to impactful projects. I am highly motivated, detail-oriented, and eager to take on new challenges that enhance my professional growth.</p>
+      <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="page">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-container">
+        <div class="edu-card">
+          <h3>Bachelor of Technology (B.Tech) in Computer Science and Engineering</h3>
+          <p><strong>KL University, Vijayawada</strong></p>
+          <p>Specialization: AI for Computational Intelligence</p>
+          <p>2023 - 2027</p>
+        </div>
+        <div class="edu-card">
+          <h3>Intermediate (Class XII)</h3>
+          <p><strong>Narayana Junior College</strong></p>
+          <p>2021-2023</p>
+          <p>percentage:90%</p>
+        </div>
+        <div class="edu-card">
+          <h3>Secondary School (Class X)</h3>
+          <p><strong>Sri Vishnu Vidhya Nikethan </strong></p>
+          <p>2020-2021</p>
+          <p>percentage:100%</p>
+        </div>
+      </div>
+      <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+  </section>
+
+  <!-- Skills & Certifications Section -->
+  <section id="skills" class="page">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>MySQL</span>
+        <span>C</span>
+      </div>
+
+      <div class="certifications-container">
+        <h2>Certifications</h2>
+        <button class="cert-btn" onclick="openCertificate('salesforce.jpg')">Salesforce AI Associate</button>
+        <button class="cert-btn" onclick="openCertificate('lingua.jpg')">Lingua Skills</button>
+        <button class="cert-btn" onclick="openCertificate('oracle.jpg')">Oracle Cloud Infrastructure</button>
+        <button class="cert-btn" onclick="openCertificate('aviatrix.jpg')">Aviatrix - Multicloud Network Associate</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+  </section>
+
+  <!-- Certificate Modal -->
+  <div id="certificateModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <button class="modal-back-btn" onclick="closeModal()">Back</button>
+  </div>
+
+  <!-- Project Video Modal -->
+  <div id="projectModal" class="modal">
+    <span class="close" onclick="closeProjectModal()">&times;</span>
+    <video id="projectVideo" controls>
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="modal-back-btn" onclick="closeProjectModal()">Back</button>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="page">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <h3 class="project-title" onclick="openProjectVideo('ai_spam_demo.mp4')">AI Spam Classifier</h3>
+          <p>Detects and classifies spam messages automatically using AI techniques.</p>
+        </div>
+        <div class="project-card">
+           <h3 class="project-title" onclick="openProjectVideo('travel_booking_system_demo.mp4')">Travel Booking System</h3>
+          <p>Easily book tickets online and plan trips efficiently.</p>
+        </div>
+      </div>
+      <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="page">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p><strong>Email:</strong> <a href="mailto:2300030762cseh@gmail.com">2300030762cseh@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yerradla-sri-laxmi-1b1b1a343" target="_blank">Yerradla Sri Laxmi</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/srilaxmi0014" target="_blank">srilaxmi0014</a></p>
+      <button class="back-btn" onclick="goBack()">Back</button>
+    </div>
+  </section>
+
+  <script>
+    // History stack to track previous page
+    const pageHistory = [];
+    const buttons = document.querySelectorAll('nav button');
+    const pages = document.querySelectorAll('.page');
+
+    // Navbar page switching
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+        const activePage = document.querySelector('.page.active');
+        pageHistory.push(activePage.id);
+        pages.forEach(page => page.classList.toggle('active', page.id === target));
+      });
+    });
+
+    // Function for section Back buttons
+    function goBack() {
+      if (pageHistory.length > 0) {
+        const lastPage = pageHistory.pop();
+        pages.forEach(page => page.classList.toggle('active', page.id === lastPage));
+      } else {
+        pages.forEach(page => page.classList.toggle('active', page.id === 'home'));
+      }
+    }
+
+    // Certificate Modal functions
+    function openCertificate(imageSrc) {
+      const activePage = document.querySelector('.page.active');
+      pageHistory.push(activePage.id);
+      const modal = document.getElementById("certificateModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById("certificateModal").style.display = "none";
+      goBack();
+    }
+
+    // Project Video Modal functions (FIXED)
+function openProjectVideo(videoSrc) {
+  const activePage = document.querySelector('.page.active');
+  pageHistory.push(activePage.id);
+
+  const modal = document.getElementById("projectModal");
+  const video = document.getElementById("projectVideo");
+
+  // Show modal correctly (flex)
+  modal.style.display = "flex";
+
+  // Reset video
+  video.pause();
+  video.currentTime = 0;
+
+  // Set source properly
+  video.src = videoSrc;
+  video.muted = true;   // REQUIRED for autoplay in Chrome
+  video.load();         // 🔥 MOST IMPORTANT LINE
+
+  // Play safely
+  video.play().catch(err => {
+    console.error("Video play failed:", err);
+  });
+}
+
+function closeProjectModal() {
+  const modal = document.getElementById("projectModal");
+  const video = document.getElementById("projectVideo");
+
+  video.pause();
+  video.currentTime = 0;
+  video.src = "";
+
+  modal.style.display = "none";
+  goBack();
+}
+
+  </script>
+
+</body>
+</html>
